@@ -8,12 +8,8 @@ function App() {
 
   return (
     <>
-     <p className='text-3xl font-bold'>Dev Stack Builder</p> 
-     <button className="btn btn-accent">Click Me</button>
       <NavBar />
-      <Hero />
-      <Tech />
-      <Footer />  
+       
     </>
   )
 }
