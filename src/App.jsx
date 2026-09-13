@@ -6,11 +6,30 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import TechnologiesSection from "./components/TechnologySection";
 
+
 export default function App() { 
     const [technologies, setTechnologies] = useState([]);
     const [loading, setLoading] = useState(true);
     const [stack, setStack] = useState([]);
-    <TechnologiesSection
+    
+    const handleAdd = (tech) => {
+        setStack((prev) => [...prev, tech]);
+        toast.success(`Added ${tech.name} to your stack!`);
+    };
+    const handleRemove = (id) => {
+        setStack((prev) => prev.filter((item) => item.id !== id));
+        toast.info(`Removed technology from your stack.`);
+    };
+    const handleRemoveAll = () => {
+        setStack([]);
+        toast.info("Cleared all technologies.");
+    };
+
+    return (
+        <div className="min-h-screen bg-white">
+            <Navbar />
+            <Hero />
+            <TechnologiesSection
         technologies={technologies}
         loading={loading}
         stack={stack}
@@ -18,11 +37,6 @@ export default function App() {
         onRemove={handleRemove}
         onRemoveAll={handleRemoveAll}
     />
-    return (
-        <div className="min-h-screen bg-white">
-            <Navbar />
-            <Hero />
-            <TechnologiesSection />
             <ToastContainer position="bottom-right" autoClose={2500} />
         </div>
     );

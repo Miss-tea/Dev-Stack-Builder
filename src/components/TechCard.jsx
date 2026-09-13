@@ -24,7 +24,7 @@ export default function TechCard({ tech, isAdded, onAdd }) {
             </svg>
             {rating}
         </span>
-
+    </div>
         <button
         type="button"
         disabled={isAdded}
@@ -42,6 +42,6 @@ export default function TechCard({ tech, isAdded, onAdd }) {
         </button>
 
     </div>
-   </div> 
+ 
   );
 }       

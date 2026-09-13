@@ -1,7 +1,7 @@
 export default function YourStack({ stack=[], onRemove, onRemoveAll }) {
-   const count = stack.length;
-   const countText = count === 1 ? "Technology Selected" : "Technologies Selected";
-    return (   
+    const count = stack.length;
+    const countText = `${count} ${count === 1 ? "Technology" : "Technologies"} Selected`;
+   return (   
         <aside className="h-fit rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">   
     <h3 className="text-lg font-bold text-slate-900">Your Stack
 </h3>
@@ -22,7 +22,7 @@ export default function YourStack({ stack=[], onRemove, onRemoveAll }) {
                         </div>
                     </div>
                     <button type="button" aria-label={`Remove ${tech.name} from stack`}
-                     onClick={() => onRemove(tech.id)} 
+                     onClick={() => onRemove && onRemove(tech.id)}
                      className="text-slate-400 hover:text-slate-600">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                             <path strokeLinecap="round" d="M6 18L18 6M6 6l12 12" />
