@@ -8,7 +8,7 @@ export default function App() {
   const [loading, setLoading] = useState(true);
   const [activeCategory, setActiveCategory] = useState('All');
 
-  useEffect(() => {s
+  useEffect(() => {
     fetch(`${import.meta.env.BASE_URL}technologies.json`)
       .then((res) => {
         if (!res.ok) {
