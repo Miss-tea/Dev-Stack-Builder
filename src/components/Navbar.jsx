@@ -1,4 +1,4 @@
- import { useState } from "react";
+ import {useState} from "react";
 import logoText from "../assets/logo-text.png";
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -29,13 +29,11 @@ export default function Navbar() {
                 <ul className="hidden flex-1 items-center justify-center gap-8 md:flex">
                   {NAV_LINKS.map((link, i) => (  
                     <li key={link}>
-                      <a
-                        href={`#${link.toLowerCase()}`}
+                      <a href={`#${link.toLowerCase()}`}
                         aria-current={i === 0 ? "page" : undefined}
                         className={`text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-pink-500 ${
                           i === 0 ? "text-pink-600" : "text-slate-600 hover:text-slate-900"
-                        }`}
-                      >
+                        }`}>
                         {link}
                       </a>
                     </li>
@@ -50,25 +48,20 @@ export default function Navbar() {
                         Sign Up
                     </a>
                 </div>
-
-
             </nav>
             {menuOpen && (
                 <ul className="flex flex-col gap-1 border-t border-slate-200 bg-white px-4 py-3 md:hidden">
                     {NAV_LINKS.map((link) => (
                         <li key={link}>
-                            <a
-                                href={`#${link.toLowerCase()}`}
+                            <a href={`#${link.toLowerCase()}`}
                                 className="block rounded-md px-2 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50"
-                                onClick={() => setMenuOpen(false)}
-                            >
+                                onClick={() => setMenuOpen(false)}>
                                 {link}
                             </a>
                         </li>
                     ))}
                 </ul>
             )}
-        </header>
-        
+        </header>      
     );
 }
