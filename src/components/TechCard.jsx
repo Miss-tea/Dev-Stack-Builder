@@ -25,19 +25,12 @@ export default function TechCard({ tech, isAdded, onAdd }) {
             {rating}
         </span>
     </div>
-        <button
-        type="button"
-        disabled={isAdded}
-        onClick={() => onAdd(tech)}
-        className={`w-full rounded-lg py-2.5 text-sm font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-500 ${
+        <button type="button"  disabled={isAdded} onClick={() => onAdd(tech)}  className={`w-full rounded-lg py-2.5 text-sm font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-500 ${
             isAdded
-                ? "cursor-not-allowed bg-slate-100 text-slate-400"
-                : "bg-slate-900 text-white hover:bg-slate-800"
+                ? "cursor-not-allowed bg-slate-100 text-slate-400": "bg-slate-900 text-white hover:bg-slate-800"
         }   
-        `}
-        >
-            {isAdded ? "✓ Added to Stack" : "Add to Stack"}
-            
+        `}>
+            {isAdded ? "✓ Added to Stack" : "Add to Stack"}      
 
         </button>
 
