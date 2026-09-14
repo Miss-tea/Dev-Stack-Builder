@@ -7,7 +7,6 @@ export default function Hero() {
         <h1 className="text-4xl font-extrabold leading-tight text-slate-900 sm:text-5xl">
           Build Your Ideal
           <br />
-          {/* Replaced brand-gradient-text with native Tailwind gradient */}
           <span className="bg-gradient-to-r from-orange-500 via-pink-500 to-purple-600 bg-clip-text text-transparent">
             Development Stack
           </span>
@@ -16,23 +15,20 @@ export default function Hero() {
           Explore frontend, backend, database, and tooling options, compare them side by side, and put together the stack that fits your next project.
         </p>
         <div className="mt-6 flex flex-wrap gap-4">
-          {/* Replaced brand-gradient-bg with native Tailwind gradient */}
           <a
             href="#technologies"
-            className="rounded-lg bg-gradient-to-r from-orange-500 via-pink-500 to-purple-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-opacity hover:opacity-90"
-          >
+            className="rounded-lg bg-gradient-to-r from-orange-500 via-pink-500 to-purple-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-opacity hover:opacity-90">
             Explore Technologies
           </a>
           <a
             href="#about"
-            className="rounded-lg border border-slate-300 px-6 py-3 text-sm font-semibold text-slate-700 transition-colors hover:border-slate-400"
-          >
+            className="rounded-lg border border-slate-300 px-6 py-3 text-sm font-semibold text-slate-700 transition-colors hover:border-slate-400" >
             Learn More
           </a>
-        </div>
+      </div>
       </div>
       <div className="flex justify-center md:justify-end">
-        <img src={heroImg} alt="Illustration of layered development technology stack" className="w-full max-w-lg" />
+        <img src={heroImg} alt="a picture of technology stack" className="w-full max-w-lg" />
       </div>
     </section>
   );
