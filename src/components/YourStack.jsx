@@ -1,6 +1,8 @@
 export default function YourStack({ stack=[], onRemove, onRemoveAll }) {
     const count = stack.length;
-    const countText = `${count} ${count === 1 ? "Technology" : "Technologies"} Selected`;
+    const countText = count === 0?
+        "No techonologies selected yet"
+        :`${count} ${count === 1 ? "Technology" : "Technologies"} Selected`;
    return (   
         <aside className="h-fit rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">   
     <h3 className="text-lg font-bold text-slate-900">Your Stack
@@ -8,7 +10,7 @@ export default function YourStack({ stack=[], onRemove, onRemoveAll }) {
     <p className="mb-4 text-sm text-slate-500">{countText}</p>
     {count===0 ? (
         <p className="rounded-lg border border-dashed border-slate-200 px-3 py-6 text-center text-sm text-slate-400">
-            Nothing here yet. Add a technology to start building your stack.
+          Your stack is empty.
         </p>
     ) : (   
         <ul className="flex flex-col gap-2">
