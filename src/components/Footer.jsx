@@ -1,3 +1,4 @@
+import logoText from "../assets/logo-text.png";
 const LINK_GROUPS = [
     { title: "Product", links: ["Home", "Technologies", "Projects"] },
     { title: "Company", links: ["About", "Contact", "Careers"] },
