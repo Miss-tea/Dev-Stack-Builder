@@ -1,5 +1,6 @@
  import {useState} from "react";
 import logoText from "../assets/logo-text.png";
+import hamburgerIcon from "../assets/hamburger.png";
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
     const NAV_LINKS = ["Home", "Technologies", "Projects", "About", "Contact"];
@@ -13,14 +14,7 @@ export default function Navbar() {
              aria-expanded={menuOpen}
              onClick={() => setMenuOpen((open) => !open)}
                 >
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    {menuOpen ? (
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                    ) : (
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />   
-                    )}
-                </svg>
-
+                <img src={hamburgerIcon} alt="Menu" className="h-6 w-6 object-contain" />
              </button>
              <a href="#home" className="flex items-center justify-center gap-2 md:mr-8 md:justify-start">  
                <img src={logoText} alt="logo" className="h-8 w-auto" /> 
