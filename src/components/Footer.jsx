@@ -10,12 +10,11 @@ export default function Footer() {
                 <div className="grid gap-10 md:grid-cols-[2fr_1fr_1fr_1fr]">
                     <div>
                         <a href="#home" className="flex items-center gap-2">
-                             <span className="bg-brand-gradient flex h-8 w-8 items-center justify-center rounded-lg text-sm font-bold text-white">
-                                DS
-                                </span>
-                            <span className="text-lg font-bold text-slate-900">
-                                Dev <span className="text-brand-gradient">Stack</span>
-                                </span> 
+                             <img 
+                src={logoText} 
+                alt="DevStack Logo" 
+                className="h-9 w-auto object-contain" 
+              />
                         </a>
                         <p className="mt-3 max-w-xs text-sm text-slate-500">
                             Curated tools, technologies, and resources for developers
